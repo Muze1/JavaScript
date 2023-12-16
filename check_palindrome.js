@@ -1,3 +1,4 @@
 // Program to check if a user input string is a palindrome or not
 
-// kjfdkj;kdskldfkl
+let word = prompt("Please enter a word: ")
+
