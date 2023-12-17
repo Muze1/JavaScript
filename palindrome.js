@@ -27,9 +27,9 @@ function isPalindrome() {
 while (true) {
     isPalindrome();
 
-    let repeat = prompt("Would you like to enter another word? (yes/no): ")
-    if (repeat.toLowerCase !== 'yes') {
-        console.log("Bye... :(")
+    let repeat = prompt("Would you like to enter another word? (yes/no): ").trim();
+    if (repeat.toLowerCase() !== 'yes') {
+        console.log("Bye... :(");
         break;
     }
 }
