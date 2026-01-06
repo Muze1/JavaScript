@@ -11,3 +11,12 @@ console.log(add7(10));
 let multiply = (a, b) => a * b;
 
 console.log(multiply(3, 2));
+
+let capFirst = function capitalize(string) {
+    let final = string.toLowerCase();
+    final = final.replace(final[0], final[0].toUpperCase());
+
+    return final;
+}
+
+console.log(capFirst("HELLooo"));
