@@ -12,11 +12,15 @@ let multiply = (a, b) => a * b;
 
 console.log(multiply(3, 2));
 
-let capFirst = function capitalize(string) {
-    let final = string.toLowerCase();
-    final = final.replace(final[0], final[0].toUpperCase());
+// let capFirst = function capitalize(string) {
+//     let final = string.toLowerCase();
+//     final = final.replace(final[0], final[0].toUpperCase());
 
-    return final;
+//     return final;
+// }
+
+let capFirst = function(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
 }
 
 console.log(capFirst("HELLooo"));
