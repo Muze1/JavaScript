@@ -11,35 +11,38 @@ function getComputerChoice() {
     }
 }
 
-console.log(getComputerChoice());
-
 function getHumanChoice() {
     let human = prompt("Enter rock, paper or scissors: ")
 
     return human;
 }
 
-console.log(getHumanChoice());
 
-let humanScore = 0;
-let computerScore = 0;
+function playGame(round) {
+    let humanScore = 0;
+    let computerScore = 0;
 
-function playRound(humanChoice, computerChoice) {
-    humanChoice = humanChoice.toLowerCase();
+    function playRound(humanChoice, computerChoice) {
+        humanChoice = humanChoice.toLowerCase();
 
-    if (humanChoice === computerChoice) {
-        return "Draw! No points";
-    } else if (((humanChoice === "rock") && (computerChoice === "paper")) || 
-    ((humanChoice === "paper") && (computerChoice === "scissors")) ||
-    ((humanChoice === "scissors") && (computerChoice === "rock"))) {
+        console.log(humanChoice)
+        console.log(computerChoice)
+        if (humanChoice === computerChoice) {
+            return "Draw! No points";
+        } else if (((humanChoice === "rock") && (computerChoice === "paper")) || 
+        ((humanChoice === "paper") && (computerChoice === "scissors")) ||
+        ((humanChoice === "scissors") && (computerChoice === "rock"))) {
 
-        computerScore++;
-        return `You lose! ${computerChoice} beats ${humanChoice}`;
-    } else {
+            computerScore++;
+            return `You lose! ${computerChoice} beats ${humanChoice}`;
+        } else {
 
-        humanScore++;
-        return `You win! ${humanChoice} beats ${computerChoice}`;
-    }
+            humanScore++;
+            return `You win! ${humanChoice} beats ${computerChoice}`;
+        }
+    }   
+
+    console.log(playRound(getHumanChoice(),getComputerChoice()));
 }
 
-console.log(playRound(getHumanChoice(),getComputerChoice()));
+playGame(playRound());
