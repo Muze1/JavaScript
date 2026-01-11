@@ -42,7 +42,13 @@ function playGame(round) {
         }
     }   
 
-    console.log(playRound(getHumanChoice(),getComputerChoice()));
+    playRound(getHumanChoice(),getComputerChoice());
+    playRound(getHumanChoice(),getComputerChoice());
+    playRound(getHumanChoice(),getComputerChoice());
+    playRound(getHumanChoice(),getComputerChoice());
+    playRound(getHumanChoice(),getComputerChoice());
+
+    console.log(`Final score is ${computerScore} for the computer and ${humanScore} for you`);
 }
 
 playGame(playRound());
