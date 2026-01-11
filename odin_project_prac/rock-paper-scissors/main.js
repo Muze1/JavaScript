@@ -18,7 +18,7 @@ function getHumanChoice() {
 }
 
 
-function playGame(round) {
+function playGame() {
     let humanScore = 0;
     let computerScore = 0;
 
@@ -51,4 +51,4 @@ function playGame(round) {
     console.log(`Final score is ${computerScore} for the computer and ${humanScore} for you`);
 }
 
-playGame(playRound());
+playGame();
