@@ -21,27 +21,56 @@ let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // }
 // console.log(sumOfTripleEvens(array));
 
-// Rewritten using map, filter and reduce methods
-function isEven(array) {
-    return array % 2 === 0;
-};
+// // Rewritten using map, filter and reduce methods
+// function isEven(array) {
+//     return array % 2 === 0;
+// };
 
-let evenNum = array.filter(isEven);
-console.log(evenNum);
+// let evenNum = array.filter(isEven);
+// console.log(evenNum);
 
-let tripledEvens = evenNum.map((num) => num * 3);
-console.log(tripledEvens);
+// let tripledEvens = evenNum.map((num) => num * 3);
+// console.log(tripledEvens);
 
-let sumOfTripledEvens = tripledEvens.reduce((total, currentItem) => {
-    return total + currentItem;
-}, 0);
-console.log(sumOfTripledEvens);
+// let sumOfTripledEvens = tripledEvens.reduce((total, currentItem) => {
+//     return total + currentItem;
+// }, 0);
+// console.log(sumOfTripledEvens);
 
-// Simplified
-function sumOfTripleEvens(array) {
-    return array
-    .filter((num) => num % 2 === 0)
-    .map((num) => num * 3)
-    .reduce((actual, current) => actual + current);
-};
-console.log(sumOfTripleEvens(array));
+// // Simplified
+// function sumOfTripleEvens(array) {
+//     return array
+//     .filter((num) => num % 2 === 0)
+//     .map((num) => num * 3)
+//     .reduce((actual, current) => actual + current);
+// };
+// console.log(sumOfTripleEvens(array));
+
+
+// Write a function that changes dash-separated words into camel-cased words
+function camelize(words) {
+    return console.log(words
+    .split('-')
+    .map((word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1))
+    .join(''));
+}
+camelize("background-colour");
+
+// Write a function filterRange(arr, a, b) that gets an array, looks for elements with values
+// higher or equal to a and lower or equal to b, and return end result as an array.
+// The function should not modify the array, but return a new one.
+
+function filterRange(arr, a, b) {
+    return arr
+    .filter((arr, a, b) => {
+        if (arr >= a) {
+            return a;
+        } else if (arr <= b) {
+            return b;
+        }
+    })
+}
+
+let arr = [5, 8, 3, 1];
+let filtered = filterRange(arr, 1, 4);
+console.log(filtered);
