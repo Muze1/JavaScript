@@ -47,30 +47,51 @@ let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // console.log(sumOfTripleEvens(array));
 
 
-// Write a function that changes dash-separated words into camel-cased words
-function camelize(words) {
-    return console.log(words
-    .split('-')
-    .map((word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1))
-    .join(''));
+// // Write a function that changes dash-separated words into camel-cased words
+// function camelize(words) {
+//     return console.log(words
+//     .split('-')
+//     .map((word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1))
+//     .join(''));
+// }
+// camelize("background-colour");
+
+// // Write a function filterRange(arr, a, b) that gets an array, looks for elements with values
+// // higher or equal to a and lower or equal to b, and return end result as an array.
+// // The function should not modify the array, but return a new one.
+
+// function filterRange(arr, a, b) {
+//     return arr
+//     .filter((arr, a, b) => {
+//         if (arr >= a) {
+//             return a;
+//         } else if (arr <= b) {
+//             return b;
+//         }
+//     })
+// }
+
+// let arr = [5, 8, 3, 1];
+// let filtered = filterRange(arr, 1, 4);
+// console.log(filtered);
+
+
+// // Create a function that copies and sorts an array
+// function copySorted(arr) {
+//     return arr.concat().sort();
+// }
+
+// let arr = ["HTML", "JavaScript", "CSS"]
+
+// let sorted = copySorted(arr);
+// console.log(sorted);
+// console.log(arr);
+
+
+// Create a function that shuffles an array randomly at each call
+function shuffle(array) {
+    array.sort(() => Math.random() - 0.5);
 }
-camelize("background-colour");
 
-// Write a function filterRange(arr, a, b) that gets an array, looks for elements with values
-// higher or equal to a and lower or equal to b, and return end result as an array.
-// The function should not modify the array, but return a new one.
-
-function filterRange(arr, a, b) {
-    return arr
-    .filter((arr, a, b) => {
-        if (arr >= a) {
-            return a;
-        } else if (arr <= b) {
-            return b;
-        }
-    })
-}
-
-let arr = [5, 8, 3, 1];
-let filtered = filterRange(arr, 1, 4);
-console.log(filtered);
+shuffle(array);
+console.log(array);
