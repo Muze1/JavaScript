@@ -34,3 +34,9 @@ divText.textContent = "ME TOO!";
 divBox.appendChild(divHeader)
 divBox.appendChild(divText)
 container.appendChild(divBox)
+
+// Button for events
+const btn = document.querySelector("#btn");
+btn.addEventListener("click", function (e) {
+    e.target.style.background = "blue";
+});
