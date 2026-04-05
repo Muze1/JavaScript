@@ -35,8 +35,19 @@ divBox.appendChild(divHeader)
 divBox.appendChild(divText)
 container.appendChild(divBox)
 
-// Button for events
-const btn = document.querySelector("#btn");
-btn.addEventListener("click", function (e) {
-    e.target.style.background = "blue";
-});
+// Event listeners with buttons
+// const buttons = document.querySelectorAll("button");
+
+// buttons.forEach((button) => {
+//     button.addEventListener("click", () => {
+//         button.style.backgroundColor = "red";
+//     })
+// })
+
+// !!! My own code - button on-click colour cycle !!!
+// Steps
+// 1. Check button's click count
+// 2. Based on count, select colour from list
+// 3. Update button's colour to that colour
+// 4. Increase the count by one for the button that was clicked
+
